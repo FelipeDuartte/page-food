@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja de Bebidas e Comidas</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1 class="fade-in">Delícias & Bebidas</h1>
+        <button class="menu-toggle" aria-label="Abrir Menu">☰</button>
+        <nav>
+            <ul>
+                <li><a href="#produtos">Produtos</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#contato">Contato</a></li>
+                <li><a href="#endereco">Entrega</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="produtos">
+        <h2>Nossos Produtos</h2>
+        
+        <div class="categoria" id="pizzas">
+            <h3>Pizzas Especiais</h3>
+            <div class="grid-container">
+                <div class="produto">
+                    <img src="pizza_calabresa.jpg" alt="Pizza de Calabresa">
+                    <h3>Pizza de Calabresa</h3>
+                    <p>Deliciosa pizza com calabresa e cebola.</p>
+                </div>
+                <div class="produto">
+                    <img src="pizza_queijo.jpg" alt="Pizza Quatro Queijos">
+                    <h3>Pizza Quatro Queijos</h3>
+                    <p>Uma explosão de sabores com quatro queijos selecionados.</p>
+                </div>
+                <div class="produto">
+                    <img src="pizza_frango.jpg" alt="Pizza de Frango com Catupiry">
+                    <h3>Pizza de Frango com Catupiry</h3>
+                    <p>O sabor inconfundível do frango desfiado com o cremoso Catupiry.</p>
+                </div>
+                <div class="produto">
+                    <img src="pizza_pepperoni.jpg" alt="Pizza de Pepperoni">
+                    <h3>Pizza de Pepperoni</h3>
+                    <p>Clássica e irresistível, com muito pepperoni crocante.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="categoria" id="hamburgueres">
+            <h3>Hambúrgueres Artesanais</h3>
+            <div class="grid-container">
+                <div class="produto">
+                    <img src="hamburguer_classico.jpg" alt="Cheeseburger Clássico">
+                    <h3>Cheeseburger Clássico</h3>
+                    <p>Pão macio, carne suculenta e queijo derretido.</p>
+                </div>
+                <div class="produto">
+                    <img src="hamburguer_bacon.jpg" alt="X-Bacon Especial">
+                    <h3>X-Bacon Especial</h3>
+                    <p>O sabor irresistível do bacon crocante com hambúrguer artesanal.</p>
+                </div>
+                <div class="produto">
+                    <img src="hamburguer_barbecue.jpg" alt="Hambúrguer Barbecue">
+                    <h3>Hambúrguer Barbecue</h3>
+                    <p>Carne grelhada coberta com molho barbecue especial.</p>
+                </div>
+                <div class="produto">
+                    <img src="hamburguer_vegano.jpg" alt="Hambúrguer Vegano">
+                    <h3>Hambúrguer Vegano</h3>
+                    <p>Uma deliciosa opção sem carne, com ingredientes naturais.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="categoria" id="acais">
+            <h3>Açaís Refrescantes</h3>
+            <div class="grid-container">
+                <div class="produto">
+                    <img src="acai_tradicional.jpg" alt="Açaí Tradicional">
+                    <h3>Açaí Tradicional</h3>
+                    <p>O puro sabor do açaí, acompanhado de granola crocante.</p>
+                </div>
+                <div class="produto">
+                    <img src="acai_banana.jpg" alt="Açaí com Banana">
+                    <h3>Açaí com Banana</h3>
+                    <p>Uma combinação perfeita para um lanche saudável.</p>
+                </div>
+                <div class="produto">
+                    <img src="acai_morango.jpg" alt="Açaí com Morango">
+                    <h3>Açaí com Morango</h3>
+                    <p>Uma explosão de sabor com morangos frescos.</p>
+                </div>
+                <div class="produto">
+                    <img src="acai_leite_condensado.jpg" alt="Açaí com Leite Condensado">
+                    <h3>Açaí com Leite Condensado</h3>
+                    <p>A cremosidade do leite condensado combinada com a refrescância do açaí.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="endereco">
+        <h2>Endereço para Entrega</h2>
+        <p>Preencha seu endereço para que possamos entregar suas delícias com rapidez e segurança!</p>
+        <form id="formEndereco">
+            <div class="input-group">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+            </div>
+            
+            <div class="input-group">
+                <label for="endereco">Endereço:</label>
+                <input type="text" id="endereco" name="endereco" placeholder="Rua, Número, Bairro" required>
+            </div>
+            
+            <div class="input-group">
+                <label for="cidade">Cidade:</label>
+                <input type="text" id="cidade" name="cidade" placeholder="Sua cidade" required>
+            </div>
+            
+            <div class="input-group">
+                <label for="cep">CEP:</label>
+                <input type="text" id="cep" name="cep" placeholder="00000-000" required>
+            </div>
+            
+            <button type="submit" class="btn">Confirmar Endereço</button>
+        </form>
+    </section>
+    
+    <section id="sobre">
+        <h2>Sobre Nós</h2>
+        <p>Aqui na <strong>Delícias & Bebidas</strong>, a gente não brinca quando o assunto é sabor! Trabalhamos com ingredientes selecionados e receitas especiais para garantir que cada mordida e cada gole sejam uma explosão de prazer. Nosso objetivo? Fazer seu dia mais gostoso e cheio de energia! Seja para matar aquela fome, refrescar o paladar ou curtir bons momentos, estamos prontos para te atender com o melhor da gastronomia. Então, que tal pedir agora e sentir o sabor da felicidade?</p>
+    </section>
+
+    <section id="contato">
+        <h2>Contato</h2>
+        <p>Entre em contato conosco para pedidos ou dúvidas!</p>
+        <p>Email: contato@deliciasbebidas.com</p>
+        <p>Telefone: (31) 99999-9999</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Delícias & Bebidas - Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
