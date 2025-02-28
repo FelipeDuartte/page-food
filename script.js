@@ -4,12 +4,14 @@ document.addEventListener('DOMContentLoaded', function () {
     const menuToggle = document.querySelector('.menu-toggle');
     const nav = document.querySelector('nav');
 
+    // Botão de Call-To-Action (se existir)
     if (ctaButton) {
         ctaButton.addEventListener('click', function () {
             alert('Você será redirecionado para a página de compras!');
         });
     }
 
+    // Validação e envio do formulário
     if (form) {
         form.addEventListener('submit', function (event) {
             event.preventDefault();
@@ -18,9 +20,15 @@ document.addEventListener('DOMContentLoaded', function () {
             const endereco = document.getElementById('endereco').value.trim();
             const cidade = document.getElementById('cidade').value.trim();
             const cep = document.getElementById('cep').value.trim();
+            const cepRegex = /^\d{5}-\d{3}$/; // Formato 00000-000
 
             if (!nome || !endereco || !cidade || !cep) {
                 alert('Por favor, preencha todos os campos corretamente.');
+                return;
+            }
+
+            if (!cepRegex.test(cep)) {
+                alert('Por favor, insira um CEP válido no formato 00000-000.');
                 return;
             }
 
@@ -28,10 +36,12 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    // Menu responsivo
     if (menuToggle && nav) {
         menuToggle.addEventListener('click', function () {
-            nav.classList.toggle('active');
+            const isOpen = nav.classList.toggle('active');
             menuToggle.classList.toggle('open');
+            menuToggle.setAttribute('aria-expanded', isOpen);
         });
     }
 });
