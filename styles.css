@@ -59,6 +59,21 @@ nav ul li a:hover {
     font-size: 24px;
 }
 
+.hero {
+    padding: 40px 20px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    margin: 20px;
+    color: #fff;
+}
+.hero img {
+    max-width: 100%;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
 section {
     padding: 60px 20px;
     background: rgba(255, 255, 255, 0.1);
@@ -94,6 +109,19 @@ section {
     width: 100%;
     height: auto;
     border-radius: 10px;
+}
+
+.categoria > h3 {
+    background: linear-gradient(135deg, #ff6600, #ffcc00);
+    padding: 15px;
+    border-radius: 8px;
+    color: #fff;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* útil se tiver ícone de seta ao lado */
 }
 
 #endereco {
@@ -268,4 +296,33 @@ section {
         font-size: 14px;
         padding: 10px;
     }
+}
+
+.hidden {
+    display: none;
+}
+.grid-container {
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+    opacity: 1;
+}
+
+.grid-container.hidden {
+    max-height: 0;
+    padding: 0;
+    opacity: 0;
+}
+.arrow {
+    transition: transform 0.3s ease;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.arrow.rotated {
+    transform: rotate(180deg);
+}
+.dica {
+    color: #fff;
+    font-size: 18px;
+    margin-top: 20px;
+    font-style: italic;
 }
